@@ -1,13 +1,11 @@
-document.addEventListener('DOMContentLoaded', function() {
+
     var exchangeRates = {
         'dollar': 0.26, 
         'dinar': 0.20,  
         'nis': 1       
     };
-
     var form = document.querySelector('.registerForm');
     var resultParagraph = document.querySelector('.result');
-
     function convertCurrency(amount, currency) {
         return amount * exchangeRates[currency];
     }
@@ -18,4 +16,4 @@ document.addEventListener('DOMContentLoaded', function() {
         var convertedAmount = convertCurrency(amount, currency);
         resultParagraph.textContent = convertedAmount;
     });
-});
+
